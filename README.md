@@ -74,6 +74,10 @@ Your project is now created, you can use the following commands to get going
     dnx . kestrel or dnx . web for web projects
 ```
 
+**Note**: make sure that you `cd` into project directory to work within project context now!
+```bash
+cd AngularJS101/
+```
 
 ## Author
 
