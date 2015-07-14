@@ -78,6 +78,16 @@ Your project is now created, you can use the following commands to get going
 ```bash
 cd AngularJS101/
 ```
+### Adding the Scripts folder
+
+> The next thing to do is to create a new folder called “Scripts”. This folder will contain all the JavaScript files needed in our application
+
+In the project directory create new scripts folder:
+
+```bash
+mkdir Scripts
+```
+
 
 ### Getting the Required Packages
 
