@@ -217,6 +217,28 @@ Please note that this rewrite `project.json` configuration file is using `beta5`
   }
 ```
 
+### Adding Models
+
+> The next step is to create model that we can use to pass data from the server to the browser /client. Now create a folder named “Models” under the root of your project. Within the “Models” folder, create a class named “DOTAHero”
+
+Again, create a directory `Models`, switch to it and invoke subgenerator for `Class` template. Note that you will have to modify namespace as generator does not yet support project-based template generation (so namespaces are not read from `project.json` file):
+
+```bash
+Models ✗ yo aspnet:Class DOTAHero
+You called the aspnet subgenerator with the arg DOTAHero
+DOTAHero.cs created.
+   create DOTAHero.cs
+```
+
+Repeat the same for `HeroManager.cs` class described in the article:
+```bash
+Models ✗ yo aspnet:Class HeroManager
+You called the aspnet subgenerator with the arg HeroManager
+HeroManager.cs created.
+   create HeroManager.cs
+```
+
+
 ## Author
 
 @blazejewicz
