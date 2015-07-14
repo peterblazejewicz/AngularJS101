@@ -238,6 +238,40 @@ HeroManager.cs created.
    create HeroManager.cs
 ```
 
+### Adding Web API Controller
+
+> Now add an “API” folder under the root of the project
+
+```bash
+mkdir API
+```
+
+> Then add a Web API controller by right-clicking the API folder and selecting Add > New Item. Select Web API Controller Class and name the controller as “HeroesController”
+
+Again, we will use subgenerator template here, so first navigate to `API` directory, generate file and then make sure to modify namespace. We will use dedicated template available in generator `yo aspnet:WebApiController [options] <name>`:
+
+```bash
+API ✗ yo aspnet:WebApiController HeroesController
+You called the aspnet subgenerator with the arg HeroesController
+HeroesController.cs created.
+   create HeroesController.cs
+```
+
+At this point you should be able to test created WebAPI controller by running application:
+```bash
+dnx . kestrel
+started
+```
+The WebAPI endpoint should be available at [http://localhost:5000/api/heroes](http://localhost:5000/api/heroes) and [http://localhost:5000/api/heroes/7](http://localhost:5000/api/heroes/7):
+
+```bash
+curl http://localhost:5000/api/heroes
+[{"ID":1,"Name":"Bristleback","Type":"Strength"},{"ID":2,"Name":"Abbadon","Type":"Strength"},{"ID":3,"Name":"Spectre","Type":"Agility"},{"ID":4,"Name":"Juggernaut","Type":"Agility"},{"ID":5,"Name":"Lion","Type":"Intelligence"},{"ID":6,"Name":"Zues","Type":"Intelligence"},{"ID":7,"Name":"Trent","Type":"Strength"}]
+```
+```bash
+http://127.0.0.1:5000/api/heroes/7
+{"ID":7,"Name":"Trent","Type":"Strength"}
+```
 
 ## Author
 
