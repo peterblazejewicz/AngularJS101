@@ -272,6 +272,63 @@ curl http://localhost:5000/api/heroes
 http://127.0.0.1:5000/api/heroes/7
 {"ID":7,"Name":"Trent","Type":"Strength"}
 ```
+### Creating the AngularJs Application
+
+The `beta5` release is the AngularJS introduction to ASP .NET 5. Now in 1.* version, it is becoming `first class citizen` in ASP .NET world. All tempaltes available in `Visual Studio 2015` are now available in `generator-aspnet`.
+
+#### Adding an AngularJs Module
+
+> To get started let's create an AngularJs module by right-clicking on the Scripts folder and selecting Add > New Item. Select AngularJs Module
+
+Go to `Scripts` directory and use `AngularModule` subgenerator to create module file:
+
+```bash
+Scripts ✗ yo aspnet:AngularModule app
+You called the aspnet subgenerator with the arg app
+app.js created.
+   create app.js
+```
+
+#### Adding an AngularJs Controller
+
+> The next thing to do is to create a client-side AngularJs Controller. Create a new folder called “Controllers” under the Script folder as in the following
+
+Within `Scripts` directory create `Controllers` directory and use Angular controller subgenerator to create `heroesController`:
+
+```bash
+➜  Controllers ✗  yo aspnet:AngularController heroesController
+You called the aspnet subgenerator with the arg heroesController
+heroesController.js created.
+   create heroesController.js
+```
+
+#### Adding the Heroes Service
+
+> Now add a new folder called “Services” within the Script folder. Right-click on the Services folder and select Add > New Item. From the dialog select AngularJs Factory and name it “heroesService.js”
+
+Within `Scripts` directory create `Services` directory and use Angular factory subgenerator to create service file:
+
+```bash
+Services ✗ yo aspnet:AngularFactory heroesService
+You called the aspnet subgenerator with the arg heroesService
+heroesService.js created.
+   create heroesService.js
+```
+
+#### Adding an AngularJs Template
+
+> Let's add an AngularJs template for displaying the list of heroes. To do this we will need an HTML page to render in the browser. In the wwwroot folder add a new HTML page and name it “index” for simplicity.
+
+The generator has also HTML static file template subgenerator we will use here. Navigate to `wwwroot` directory and create `index.html` file:
+
+```bash
+wwwroot ✗ yo aspnet:HTMLPage index
+You called the aspnet subgenerator with the arg index
+index.html created.
+   create index.html
+```
+
+
 
 ## Author
 
