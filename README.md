@@ -153,6 +153,44 @@ grunt@0.4.5 node_modules/grunt
 ├── grunt-legacy-log@0.1.2 (grunt-legacy-log-utils@0.1.1, underscore.string@2.3.3, lodash@2.4.2)
 └── js-yaml@2.0.5 (esprima@1.0.4, argparse@0.1.16)
 ```
+### Configuring Grunt
+
+> Grunt is an open-source tool that enables you to build client-side resources for your project. 
+
+[..] 
+> In this example, we will use Grunt to combine and minify JavaScript files. We will configure Grunt so that it will take all the JavaScript files from the Scripts folder that we created earlier, combine and minify the files and finally save the results to a file named app.js within the wwwroot folder.
+
+[...]
+> Now right-click on your project and select Add > New Item. Select Grunt Configuration file
+
+We will again use `generator-aspnet` subgenerator to create `Grunt` configuration file template:
+
+```bash
+yo aspnet:Gruntfile
+```
+
+This creates `Gruntfile.js` in current directory. Modify its content as described in article:
+```JavaScript
+module.exports = function (grunt) {  
+   grunt.loadNpmTasks('grunt-contrib-uglify');  
+   grunt.loadNpmTasks('grunt-contrib-watch');  
+  
+   grunt.initConfig({  
+      uglify: {  
+         my_target: {  
+         files: { 'wwwroot/app.js': ['Scripts/app.js', 'Scripts/**/*.js'] }  
+      }  
+},  
+watch: {  
+   scripts: {  
+      files: ['Scripts/**/*.js'],  
+         tasks: ['uglify']  
+      }  
+   }  
+});  
+   grunt.registerTask('default', ['uglify', 'watch']);  
+};
+```
 
 ## Author
 
