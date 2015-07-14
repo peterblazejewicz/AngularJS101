@@ -101,6 +101,48 @@ This creates `package.json` file in your current directory. Modify its content a
 }
 ```
 
+### Restore Packages
+
+> Right-click on the NPM folder and select Restore Packages to download all the packages required. Note that this may take a bit to finish the download so just be patient and wait ;). Then the grunt, grunt-contrib-uglify and grunt-contrib-watch NPM packages should now be installed
+
+No, there is no right-click in the terminal. So just use NPM to install packages added in previous step:
+```bash
+npm install
+grunt-contrib-watch@0.6.1 node_modules/grunt-contrib-watch
+├── async@0.2.10
+├── lodash@2.4.2
+├── gaze@0.5.1 (globule@0.1.0)
+└── tiny-lr-fork@0.0.5 (debug@0.7.4, faye-websocket@0.4.4, noptify@0.0.3, qs@0.5.6)
+
+grunt-contrib-uglify@0.9.1 node_modules/grunt-contrib-uglify
+├── uri-path@0.0.2
+├── chalk@1.1.0 (escape-string-regexp@1.0.3, supports-color@2.0.0, ansi-styles@2.1.0, has-ansi@2.0.0, strip-ansi@3.0.0)
+├── lodash@3.10.0
+├── uglify-js@2.4.23 (uglify-to-browserify@1.0.2, async@0.2.10, yargs@3.5.4, source-map@0.1.34)
+└── maxmin@1.1.0 (figures@1.3.5, gzip-size@1.0.0, pretty-bytes@1.0.4)
+
+grunt@0.4.5 node_modules/grunt
+├── dateformat@1.0.2-1.2.3
+├── which@1.0.9
+├── eventemitter2@0.4.14
+├── getobject@0.1.0
+├── rimraf@2.2.8
+├── colors@0.6.2
+├── async@0.1.22
+├── grunt-legacy-util@0.2.0
+├── hooker@0.2.3
+├── exit@0.1.2
+├── nopt@1.0.10 (abbrev@1.0.7)
+├── glob@3.1.21 (inherits@1.0.0, graceful-fs@1.2.3)
+├── lodash@0.9.2
+├── minimatch@0.2.14 (sigmund@1.0.1, lru-cache@2.6.5)
+├── coffee-script@1.3.3
+├── underscore.string@2.2.1
+├── iconv-lite@0.2.11
+├── findup-sync@0.1.3 (glob@3.2.11, lodash@2.4.2)
+├── grunt-legacy-log@0.1.2 (grunt-legacy-log-utils@0.1.1, underscore.string@2.3.3, lodash@2.4.2)
+└── js-yaml@2.0.5 (esprima@1.0.4, argparse@0.1.16)
+```
 
 ## Author
 
