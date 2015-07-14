@@ -191,6 +191,15 @@ watch: {
    grunt.registerTask('default', ['uglify', 'watch']);
 };
 ```
+> Now save the file and let's run the Grunt file using Visual Studio Task Runner Explorer. To do this, go to View > Other Windows > Task Runner Explorer in Visual Studio main menu.
+
+[...]
+> Now right-click on the default task and select Run.
+
+From your console just run Grunt and it will use default task:
+```bash
+grunt
+```
 
 ## Author
 
