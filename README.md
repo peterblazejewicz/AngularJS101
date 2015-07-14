@@ -197,8 +197,24 @@ watch: {
 > Now right-click on the default task and select Run.
 
 From your console just run Grunt and it will use default task:
+
 ```bash
 grunt
+```
+
+### Configuring ASP.NET MVC
+
+> First, we need to modify the project.json file to in include MVC 6 under dependencies:
+
+Please note that this rewrite `project.json` configuration file is using `beta5` related packages, so there is an update compared to original article. The repository `project.json` created with generator is updated to current beta.
+
+```JSON
+"dependencies": {
+    "Microsoft.AspNet.Server.IIS": "1.0.0-beta5",
+    "Microsoft.AspNet.Server.WebListener": "1.0.0-beta5",
+    "Kestrel": "1.0.0-beta5",
+    "Microsoft.AspNet.Mvc": "6.0.0-beta5"
+  }
 ```
 
 ## Author
