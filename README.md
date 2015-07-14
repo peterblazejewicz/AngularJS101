@@ -79,6 +79,29 @@ Your project is now created, you can use the following commands to get going
 cd AngularJS101/
 ```
 
+### Getting the Required Packages
+
+> For this example we need to use NPM to install the resources we need in our application such as Grunt and the Grunt plugins. To do this just right-click in the Project (in this case AngularJS101) and select Add > New Item. In the dialog select NPM configuration file
+
+The `generator-aspnet` ships with individual files templates for nearly all type of client or server side items in `Visual Studio`. To generate `NPM` package use package subgenerator which has a syntax `yo aspnet:PackageJson [options]`. So from comamnd-line type:
+```
+yo aspnet:PackageJson
+```
+This creates `package.json` file in your current directory. Modify its content as described in article:
+```JSON
+{
+   "version": "1.0.0",
+   "name": "AngularJS101",
+   "private": true,
+   "devDependencies": {
+   "grunt": "0.4.5",
+   "grunt-contrib-uglify": "0.9.1",
+   "grunt-contrib-watch": "0.6.1"
+   }
+}
+```
+
+
 ## Author
 
 @blazejewicz
