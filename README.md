@@ -2,7 +2,7 @@
 
 A `generator-aspnet` rewrite of the [ASP.Net 5: Jump Start to AngularJS With MVC 6 Web API' article](http://www.c-sharpcorner.com/UploadFile/8c19e8/Asp-Net-5-jump-start-to-angularjs-with-mvc-6-web-api/)
 
-## Prerequisitues
+## Prerequisites
 
 * No `Visual Studio 2015` the original article is using. You can use `Visual Studio Code` or any other editor of your choice
 
