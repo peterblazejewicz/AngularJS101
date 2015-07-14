@@ -18,6 +18,7 @@ namespace AngularJS101
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseStaticFiles();
             app.UseMvc();
         }
     }

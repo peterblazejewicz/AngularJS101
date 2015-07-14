@@ -328,8 +328,52 @@ index.html created.
    create index.html
 ```
 
+### Forcing static file to work
 
+At this point the content seems to be not ready to be served as static page via: [http://localhost:5000/index.html](http://localhost:5000/index.html).
 
+To actually make it happen you will need to:
+
+* add static file support to project
+```JSON
+"dependencies": {
+    "Microsoft.AspNet.Server.IIS": "1.0.0-beta5",
+    "Microsoft.AspNet.Server.WebListener": "1.0.0-beta5",
+    "Kestrel": "1.0.0-beta5",
+    "Microsoft.AspNet.Mvc": "6.0.0-beta5",
+    "Microsoft.AspNet.StaticFiles": "1.0.0-beta5"
+  }
+```
+* add static file support to application in `Startup.cs`:
+```C#
+public void Configure(IApplicationBuilder app)
+{
+    app.UseStaticFiles();
+    app.UseMvc();
+}
+```
+
+* refetch project dependencies
+
+```bash
+dnu restore
+```
+and then restart project:
+```bash
+dnx . kestrel
+```
+and finally go to [http://localhost:5000/index.html](http://localhost:5000/index.html):
+```
+DOTA Heroes
+
+ID  Name  Type
+1 Bristleback Strength
+2 Abbadon Strength
+3 Spectre Agility
+4 Juggernaut  Agility
+5 Lion  Intelligence
+6 Zues  Intelligence
+```
 ## Author
 
 @blazejewicz
