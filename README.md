@@ -1,6 +1,6 @@
 # AngularJS101
 
-A `generator-aspnet` rewrite of the [ASP.Net 5: Jump Start to AngularJS With MVC 6 Web API' article](http://www.c-sharpcorner.com/UploadFile/8c19e8/Asp-Net-5-jump-start-to-angularjs-with-mvc-6-web-api/). Please consult the original article to get idea what we are doing here. 
+A `generator-aspnet` rewrite of the [ASP.Net 5: Jump Start to AngularJS With MVC 6 Web API' article](http://www.c-sharpcorner.com/UploadFile/8c19e8/Asp-Net-5-jump-start-to-angularjs-with-mvc-6-web-api/). Please consult the original article to get idea what we are doing here.
 
 Thanks!
 
@@ -40,18 +40,18 @@ From the option offered choose `Empty application':
    `---------´   |   marvellous ASP.NET 5   |
     ( _´U`_ )    |        generator!        |
     /___A___\    '--------------------------'
-     |  ~  |     
-   __'.___.'__   
- ´   `  |° ´ Y ` 
+     |  ~  |
+   __'.___.'__
+ ´   `  |° ´ Y `
 
-? What type of application do you want to create? 
-❯ Empty Application 
-  Console Application 
-  Web Application 
-  Web Application Basic [without Membership and Authorization] 
-  Web API Application 
-  Nancy ASP.NET Application 
-  Class Library 
+? What type of application do you want to create?
+❯ Empty Application
+  Console Application
+  Web Application
+  Web Application Basic [without Membership and Authorization]
+  Web API Application
+  Nancy ASP.NET Application
+  Class Library
 ```
 Choose `AngularJS101` as the name of the application:
 ```bash
@@ -155,9 +155,9 @@ grunt@0.4.5 node_modules/grunt
 ```
 ### Configuring Grunt
 
-> Grunt is an open-source tool that enables you to build client-side resources for your project. 
+> Grunt is an open-source tool that enables you to build client-side resources for your project.
 
-[..] 
+[..]
 > In this example, we will use Grunt to combine and minify JavaScript files. We will configure Grunt so that it will take all the JavaScript files from the Scripts folder that we created earlier, combine and minify the files and finally save the results to a file named app.js within the wwwroot folder.
 
 [...]
@@ -171,24 +171,24 @@ yo aspnet:Gruntfile
 
 This creates `Gruntfile.js` in current directory. Modify its content as described in article:
 ```JavaScript
-module.exports = function (grunt) {  
-   grunt.loadNpmTasks('grunt-contrib-uglify');  
-   grunt.loadNpmTasks('grunt-contrib-watch');  
-  
-   grunt.initConfig({  
-      uglify: {  
-         my_target: {  
-         files: { 'wwwroot/app.js': ['Scripts/app.js', 'Scripts/**/*.js'] }  
-      }  
-},  
-watch: {  
-   scripts: {  
-      files: ['Scripts/**/*.js'],  
-         tasks: ['uglify']  
-      }  
-   }  
-});  
-   grunt.registerTask('default', ['uglify', 'watch']);  
+module.exports = function (grunt) {
+   grunt.loadNpmTasks('grunt-contrib-uglify');
+   grunt.loadNpmTasks('grunt-contrib-watch');
+
+   grunt.initConfig({
+      uglify: {
+         my_target: {
+         files: { 'wwwroot/app.js': ['Scripts/app.js', 'Scripts/**/*.js'] }
+      }
+},
+watch: {
+   scripts: {
+      files: ['Scripts/**/*.js'],
+         tasks: ['uglify']
+      }
+   }
+});
+   grunt.registerTask('default', ['uglify', 'watch']);
 };
 ```
 
