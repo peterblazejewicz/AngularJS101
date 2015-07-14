@@ -1,6 +1,7 @@
 # AngularJS101
 
 A `generator-aspnet` rewrite of the [ASP.Net 5: Jump Start to AngularJS With MVC 6 Web API' article](http://www.c-sharpcorner.com/UploadFile/8c19e8/Asp-Net-5-jump-start-to-angularjs-with-mvc-6-web-api/). Please consult the original article to get idea what we are doing here.
+The original article was written by [Vincent Maverick Durano](https://proudmonkey.azurewebsites.net/), Microsoft MVP, DZone MVB, Technical Lead, blogger and speaker.
 
 Thanks!
 
@@ -93,7 +94,7 @@ mkdir Scripts
 
 > For this example we need to use NPM to install the resources we need in our application such as Grunt and the Grunt plugins. To do this just right-click in the Project (in this case AngularJS101) and select Add > New Item. In the dialog select NPM configuration file
 
-The `generator-aspnet` ships with individual files templates for nearly all type of client or server side items in `Visual Studio`. To generate `NPM` package use package subgenerator which has a syntax `yo aspnet:PackageJson [options]`. So from comamnd-line type:
+The `generator-aspnet` ships with individual files templates for nearly all type of client or server side items in `Visual Studio`. To generate `NPM` package use package subgenerator which has a syntax `yo aspnet:PackageJson [options]`. So from command-line type:
 ```
 yo aspnet:PackageJson
 ```
@@ -274,7 +275,7 @@ http://127.0.0.1:5000/api/heroes/7
 ```
 ### Creating the AngularJs Application
 
-The `beta5` release is the AngularJS introduction to ASP .NET 5. Now in 1.* version, it is becoming `first class citizen` in ASP .NET world. All tempaltes available in `Visual Studio 2015` are now available in `generator-aspnet`.
+The `beta5` release is the AngularJS introduction to ASP .NET 5. Now in 1.* version, it is becoming `first class citizen` in ASP .NET world. All templates available in `Visual Studio 2015` are now available in `generator-aspnet`.
 
 #### Adding an AngularJs Module
 
@@ -374,6 +375,17 @@ ID  Name  Type
 5 Lion  Intelligence
 6 Zues  Intelligence
 ```
+
+## Getting help
+
+To see all available subgenerators in `generator-aspnet`:
+
+```bash
+yo aspnet --help
+```
+
+Tweet [#generatoraspnet](#generatoraspnet) if you want to be involved in shaping future of ASP .NET 5 tools!
+
 ## Author
 
 @blazejewicz
